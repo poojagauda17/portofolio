@@ -168,7 +168,7 @@ echo
                     <div class="social-icons">
                         <a href="https://www.linkedin.com/in/pooja-gauda-10019021b/"><i class="fab fa-facebook"></i></a>
                         <a href="https://www.linkedin.com/in/pooja-gauda-10019021b/"><i class="fab fa-twitter-square"></i></a>
-                        <a href="https://www.linkedin.com/in/pooja-gauda-10019021b/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.instagram.com/pooja__gauda/"><i class="fab fa-instagram"></i></a>
                         <a href="https://www.linkedin.com/in/pooja-gauda-10019021b/"><i class="fab fa-linkedin"></i></a>
                     </div>
                     <a href="images/Updated Resume (Pooja Gauda).pdf" download class="btn btn2">Download CV</a>
@@ -180,8 +180,6 @@ echo
             <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
             <button type="submit" class="btn btn2" name="submit">Submit</button>
         </form>
-        <!-- <span id="msg"></span> -->
-        <!-- <div id="toastBox"></div> -->
     </div>
             </div>
         </div>
@@ -189,31 +187,6 @@ echo
             <p>Copyright </p>
         </div>
     </div>
-    <script>
-        let toastBox = document.getElementById('toastBox');
-        function showToast(){
-           let toast = document.createElement('div');
-           toast.classList.add('toast');
-           toast.innerHTML= '<i class="fa-solid fa-circle-check"></i>Successfully submitted';
-           toastBox.appendChild(toast);
-           setTimeout(()=>{
-               toast.remove();
-            },6000)
-        }
-        form.addEventListener('submit', e => {
-            e.preventDefault()
-            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => {
-                toast.innerHTML= '<i class="fa-solid fa-circle-check"></i>Successfully submitted';
-                setTimeout(function(){
-                    msg.innerHTML = ""
-
-                },5000)
-                form.reset()
-            })
-            .catch(error => console.error('Error!', error.message))
-        })
-    </script>
     <script>
         var tablinks = document.getElementsByClassName("tab-links");
         var tabcontents = document.getElementsByClassName("tab-contents");
